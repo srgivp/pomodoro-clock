@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#for-react-content {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100vh;
+  overflow: auto;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva,
+    Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(7, 54, 15);
+}
+#for-react-content::after {
+  content: "";
+  position: absolute;
+  background: url(https://res.cloudinary.com/dmujv3o3b/image/upload/v1585134870/200325-tomatoes-plant.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+#pomodoro-project {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#break-container {
+  display: none;
+  text-align: center;
+  margin-right: 1%;
+  z-index: 3;
+}
+#break-decrement,
+#break-increment,
+#session-decrement,
+#session-increment,
+/*#start_stop,*/
+#reset {
+  border: solid 1px rgb(7, 54, 15);
+  border-radius: 5px;
+  user-select: none;
+}
+@media only screen and (min-width: 360px) {
+  #break-decrement:hover,
+  #break-increment:hover,
+  #session-decrement:hover,
+  #session-increment:hover,
+  #start_stop:hover,
+  #reset:hover {
+    border: solid 3px cyan;
+    cursor: pointer;
+  }
+}
+#break-decrement:active,
+#break-increment:active,
+#session-decrement:active,
+#session-increment:active,
+#start_stop:active,
+#reset:active {
+  background-color: cyan;
+  transition: 0s;
+}
+#break-decrement,
+#session-decrement,
+#reset {
+  margin-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#start_stop {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#session-container {
+  display: none;
+  text-align: center;
+  margin-left: 1%;
+  z-index: 3;
+}
+#pomodoro-container {
+  position: relative;
+  background-color: white;
+  font-size: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pomodoro {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+#pomodoroPicture {
+  width: 300px;
+  height: 300px;
+}
+#pomodoro-after {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  mix-blend-mode: lighten;
+  z-index: 1;
+}
+#timer-label {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+#time-left {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+#start_stop {
+  display: flex;
+  align-items: center;
+  margin-right: 1%;
+  line-height: 1;
+  z-index: 3;
+  user-select: none;
+  opacity: 0.2;
+}
+#reset {
+  display: none;
+  align-items: center;
+  margin-left: 1%;
+  z-index: 3;
+}
+@media only screen and (max-width: 360px) {
+  #pomodoro-project {
+    font-size: 12px;
+  }
+  #pomodoroPicture {
+    width: 200px;
+    height: 200px;
+  }
+}
+#attribution {
+  font-size: 70%;
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
